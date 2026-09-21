@@ -39,17 +39,61 @@
         rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Portfolio project showcase: horizontal scroll */
+        .projects-scroll {
+            display: flex !important;
+            gap: 28px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 10px 4px 28px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .projects-scroll .project-card {
+            flex: 0 0 min(380px, 86vw);
+            scroll-snap-align: start;
+        }
+
+        .projects-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .projects-scroll::-webkit-scrollbar-thumb {
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .projects-scroll::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .projects-scroll {
+                gap: 18px;
+                padding-bottom: 22px;
+            }
+
+            .projects-scroll .project-card {
+                flex-basis: 88vw;
+            }
+        }
+    </style>
 
 </head>
 
 <body>
 
     <div id="scroll-progress"></div>
-
 
     <!-- PREMIUM LOADER -->
 
@@ -73,7 +117,6 @@
 
     </div>
 
-
     <!-- ==========================
          HEADER
     =========================== -->
@@ -83,7 +126,6 @@
         <a href="#home" class="logo" aria-label="Hadi Home">
             HADI
         </a>
-
 
         <nav class="navbar" aria-label="Main navigation">
 
@@ -101,8 +143,10 @@
 
         </nav>
 
-
-        <button class="menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false"
+        <button class="menu-btn"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
             aria-controls="main-navigation">
 
             <i class="fas fa-bars" aria-hidden="true"></i>
@@ -110,7 +154,6 @@
         </button>
 
     </header>
-
 
     <!-- ==========================
          HERO SECTION
@@ -124,11 +167,9 @@
                 Premium Portfolio
             </span>
 
-
             <h1 id="hero-title"></h1>
 
             <h3 id="hero-role"></h3>
-
 
             <p>
                 I build modern, premium and luxury websites
@@ -136,22 +177,21 @@
                 high-quality user experience.
             </p>
 
-
             <a href="#contact" class="btn">
                 Hire Me
             </a>
 
         </div>
 
-
         <div class="home-image">
 
-            <img src="Hadi 3.jpg" alt="Hadi - Frontend Developer" fetchpriority="high">
+            <img src="Hadi 3.jpg"
+                alt="Hadi - Frontend Developer"
+                fetchpriority="high">
 
         </div>
 
     </section>
-
 
     <!-- ==========================
          PREMIUM STATS
@@ -173,7 +213,6 @@
 
             </div>
 
-
             <div class="stat-card">
 
                 <div class="stat-number">
@@ -186,7 +225,6 @@
 
             </div>
 
-
             <div class="stat-card">
 
                 <div class="stat-number">
@@ -198,7 +236,6 @@
                 </div>
 
             </div>
-
 
             <div class="stat-card">
 
@@ -216,7 +253,6 @@
 
     </section>
 
-
     <!-- ==========================
          ABOUT SECTION
     =========================== -->
@@ -225,10 +261,11 @@
 
         <div class="about-image">
 
-            <img src="Hadi 5.jpg" alt="Hadi - About Me" loading="lazy">
+            <img src="Hadi 5.jpg"
+                alt="Hadi - About Me"
+                loading="lazy">
 
         </div>
-
 
         <div class="about-content">
 
@@ -247,7 +284,6 @@
                 and professional user interfaces.
             </p>
 
-
             <a href="#projects" class="btn">
                 View Projects
             </a>
@@ -255,7 +291,6 @@
         </div>
 
     </section>
-
 
     <!-- ==========================
          SKILLS SECTION
@@ -279,7 +314,6 @@
 
         </div>
 
-
         <div class="skill-container">
 
             <div class="skill-card">
@@ -295,7 +329,6 @@
 
             </div>
 
-
             <div class="skill-card">
 
                 <h3>
@@ -308,7 +341,6 @@
                 </p>
 
             </div>
-
 
             <div class="skill-card">
 
@@ -323,7 +355,6 @@
 
             </div>
 
-
             <div class="skill-card">
 
                 <h3>
@@ -337,7 +368,6 @@
 
             </div>
 
-
             <div class="skill-card">
 
                 <h3>
@@ -350,7 +380,6 @@
                 </p>
 
             </div>
-
 
             <div class="skill-card">
 
@@ -368,7 +397,6 @@
         </div>
 
     </section>
-
 
     <!-- ==========================
          SERVICES SECTION
@@ -393,13 +421,12 @@
 
         </div>
 
-
         <div class="services-container">
-
 
             <div class="service-card">
 
-                <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                <i class="fas fa-laptop-code"
+                    aria-hidden="true"></i>
 
                 <h3>
                     Web Development
@@ -412,10 +439,10 @@
 
             </div>
 
-
             <div class="service-card">
 
-                <i class="fas fa-paint-brush" aria-hidden="true"></i>
+                <i class="fas fa-paint-brush"
+                    aria-hidden="true"></i>
 
                 <h3>
                     UI / UX Design
@@ -428,10 +455,10 @@
 
             </div>
 
-
             <div class="service-card">
 
-                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                <i class="fas fa-mobile-alt"
+                    aria-hidden="true"></i>
 
                 <h3>
                     Responsive Design
@@ -447,7 +474,6 @@
         </div>
 
     </section>
-
 
     <!-- ==========================
          PROJECTS SECTION
@@ -466,37 +492,47 @@
             </h2>
 
             <p>
-                Some of my best premium web development projects.
+                A focused collection of premium websites built with modern UI,
+                responsive design and interactive experiences.
             </p>
 
         </div>
 
+        <!-- Horizontal project showcase -->
 
-        <div class="projects-container">
+        <div class="projects-container projects-scroll">
 
-
-            <!-- PROJECT 1 -->
+            <!-- ==========================
+                 PROJECT 01 — BUSINESS WEBSITE
+            =========================== -->
 
             <div class="project-card">
 
-                <img src="portfolio.jpg" alt="Portfolio Website project preview" loading="lazy">
-
+                <img src="NOVA.png"
+                    alt="Nova Business Website project preview"
+                    loading="lazy">
 
                 <span class="project-badge">
-                    Premium
+                    PROJECT 01
                 </span>
-
 
                 <div class="project-overlay">
 
-                    <a href="#" class="project-icon" aria-label="View Portfolio Website">
+                    <a href="https://hadikhan122.github.io/project-01-business-website/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-icon"
+                        aria-label="View Nova Business Website">
 
                         <i class="fas fa-eye" aria-hidden="true"></i>
 
                     </a>
 
-
-                    <a href="#" class="project-icon" aria-label="Portfolio GitHub">
+                    <a href="https://github.com/hadikhan122/project-01-business-website"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-icon"
+                        aria-label="Nova Business Website GitHub">
 
                         <i class="fab fa-github" aria-hidden="true"></i>
 
@@ -504,50 +540,55 @@
 
                 </div>
 
-
                 <div class="project-info">
 
                     <h3>
-                        🌐 Portfolio Website
+                        🏢 Nova Business Website
                     </h3>
 
                     <p>
-                        Luxury portfolio website with modern
-                        animations and responsive design.
+                        A premium responsive business website with elegant
+                        sections, modern UI, smooth interactions and a
+                        professional corporate experience.
                     </p>
-
 
                     <div class="project-tech">
 
                         <span>HTML5</span>
                         <span>CSS3</span>
                         <span>JavaScript</span>
+                        <span>Responsive</span>
 
                     </div>
 
-
-                    <a href="#" class="btn" aria-label="View Portfolio Project">
+                    <a href="https://hadikhan122.github.io/project-01-business-website/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn"
+                        aria-label="View Nova Business Project">
 
                         View Project
 
                     </a>
 
-
                     <div class="project-links">
 
-                        <a href="#" aria-label="Portfolio Live Demo">
+                        <a href="https://hadikhan122.github.io/project-01-business-website/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Nova Business Live Demo">
 
                             <i class="fas fa-globe" aria-hidden="true"></i>
-
                             Live Demo
 
                         </a>
 
-
-                        <a href="#" aria-label="Portfolio GitHub">
+                        <a href="https://github.com/hadikhan122/project-01-business-website"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Nova Business GitHub">
 
                             <i class="fab fa-github" aria-hidden="true"></i>
-
                             GitHub
 
                         </a>
@@ -558,29 +599,37 @@
 
             </div>
 
-
-            <!-- PROJECT 2 -->
+            <!-- ==========================
+                 PROJECT 02 — ONLINE SHOPPING STORE
+            =========================== -->
 
             <div class="project-card">
 
-                <img src="business.png" alt="Business Website project preview" loading="lazy">
-
+                <img src="oss.png"
+                    alt="Online Shopping Store project preview"
+                    loading="lazy">
 
                 <span class="project-badge">
-                    Premium
+                    PROJECT 02
                 </span>
-
 
                 <div class="project-overlay">
 
-                    <a href="#" class="project-icon" aria-label="View Business Website">
+                    <a href="https://hadikhan122.github.io/project-02-oss/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-icon"
+                        aria-label="View Online Shopping Store">
 
                         <i class="fas fa-eye" aria-hidden="true"></i>
 
                     </a>
 
-
-                    <a href="#" class="project-icon" aria-label="Business GitHub">
+                    <a href="https://github.com/hadikhan122/project-02-oss"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-icon"
+                        aria-label="OSS GitHub">
 
                         <i class="fab fa-github" aria-hidden="true"></i>
 
@@ -588,50 +637,55 @@
 
                 </div>
 
-
                 <div class="project-info">
 
                     <h3>
-                        🏢 Business Website
+                        🛍️ Online Shopping Store
                     </h3>
 
                     <p>
-                        Professional business website with
-                        elegant design and premium UI.
+                        A modern shopping experience with product search,
+                        categories, cart management, wishlist interactions
+                        and responsive frontend design.
                     </p>
-
 
                     <div class="project-tech">
 
                         <span>HTML5</span>
                         <span>CSS3</span>
                         <span>JavaScript</span>
+                        <span>Responsive</span>
 
                     </div>
 
-
-                    <a href="#" class="btn" aria-label="View Business Project">
+                    <a href="https://hadikhan122.github.io/project-02-oss/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn"
+                        aria-label="View Online Shopping Store">
 
                         View Project
 
                     </a>
 
-
                     <div class="project-links">
 
-                        <a href="#" aria-label="Business Live Demo">
+                        <a href="https://hadikhan122.github.io/project-02-oss/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="OSS Live Demo">
 
                             <i class="fas fa-globe" aria-hidden="true"></i>
-
                             Live Demo
 
                         </a>
 
-
-                        <a href="#" aria-label="Business GitHub">
+                        <a href="https://github.com/hadikhan122/project-02-oss"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="OSS GitHub">
 
                             <i class="fab fa-github" aria-hidden="true"></i>
-
                             GitHub
 
                         </a>
@@ -642,29 +696,39 @@
 
             </div>
 
-
-            <!-- PROJECT 3 -->
+            <!-- ==========================
+                 PROJECT 03 — TSCO SCHOOL & COLLEGE
+            =========================== -->
 
             <div class="project-card">
 
-                <img src="ecommerce.png" alt="E-commerce Website project preview" loading="lazy">
-
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80"
+                    alt="TSCO Turkish School and College Oghi project preview"
+                    loading="lazy">
 
                 <span class="project-badge">
-                    Premium
+                    PROJECT 03
                 </span>
-
 
                 <div class="project-overlay">
 
-                    <a href="#" class="project-icon" aria-label="View E-commerce Website">
+                    <!-- TSCO LIVE -->
+                    <a href="https://hadikhan122.github.io/project-03-school-college/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-icon"
+                        aria-label="View TSCO School and College Website">
 
                         <i class="fas fa-eye" aria-hidden="true"></i>
 
                     </a>
 
-
-                    <a href="#" class="project-icon" aria-label="E-commerce GitHub">
+                    <!-- TSCO GITHUB -->
+                    <a href="https://github.com/hadikhan122/project-03-school-college"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-icon"
+                        aria-label="TSCO School and College GitHub">
 
                         <i class="fab fa-github" aria-hidden="true"></i>
 
@@ -672,50 +736,60 @@
 
                 </div>
 
-
                 <div class="project-info">
 
                     <h3>
-                        🛒 E-commerce Website
+                        🎓 TSCO — Turkish School & College Oghi
                     </h3>
 
                     <p>
-                        Modern online shopping website with
-                        premium UI and smooth experience.
+                        A premium academic website combining school and college
+                        information with admissions, programs, leadership,
+                        classes, student management, staff management,
+                        attendance, salary records, timetables and campus
+                        information.
                     </p>
-
 
                     <div class="project-tech">
 
                         <span>HTML5</span>
                         <span>CSS3</span>
                         <span>JavaScript</span>
+                        <span>Responsive</span>
 
                     </div>
 
-
-                    <a href="#" class="btn" aria-label="View E-commerce Project">
+                    <!-- TSCO VIEW PROJECT -->
+                    <a href="https://hadikhan122.github.io/project-03-school-college/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn"
+                        aria-label="View TSCO School and College Project">
 
                         View Project
 
                     </a>
 
-
                     <div class="project-links">
 
-                        <a href="#" aria-label="E-commerce Live Demo">
+                        <!-- TSCO LIVE DEMO -->
+                        <a href="https://hadikhan122.github.io/project-03-school-college/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="TSCO School and College Live Demo">
 
                             <i class="fas fa-globe" aria-hidden="true"></i>
-
                             Live Demo
 
                         </a>
 
-
-                        <a href="#" aria-label="E-commerce GitHub">
+                        <!-- TSCO GITHUB -->
+                        <a href="https://github.com/hadikhan122/project-03-school-college"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="TSCO School and College GitHub">
 
                             <i class="fab fa-github" aria-hidden="true"></i>
-
                             GitHub
 
                         </a>
@@ -729,7 +803,6 @@
         </div>
 
     </section>
-
 
     <!-- ==========================
          CONTACT SECTION
@@ -754,9 +827,7 @@
 
         </div>
 
-
         <div class="contact-container">
-
 
             <!-- Contact Information -->
 
@@ -764,7 +835,8 @@
 
                 <div class="contact-box">
 
-                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <i class="fas fa-envelope"
+                        aria-hidden="true"></i>
 
                     <div>
 
@@ -780,10 +852,10 @@
 
                 </div>
 
-
                 <div class="contact-box">
 
-                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <i class="fas fa-phone"
+                        aria-hidden="true"></i>
 
                     <div>
 
@@ -799,10 +871,10 @@
 
                 </div>
 
-
                 <div class="contact-box">
 
-                    <i class="fas fa-location-dot" aria-hidden="true"></i>
+                    <i class="fas fa-location-dot"
+                        aria-hidden="true"></i>
 
                     <div>
 
@@ -820,29 +892,45 @@
 
             </div>
 
-
             <!-- REAL CONTACT FORM — FORMSPREE -->
 
-            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xbglrdov" method="POST"
+            <form class="contact-form"
+                id="contactForm"
+                action="https://formspree.io/f/xbglrdov"
+                method="POST"
                 aria-label="Contact form">
 
-                <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" autocomplete="name"
+                <input type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    aria-label="Your Name"
+                    autocomplete="name"
                     required>
 
-
-                <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" autocomplete="email"
+                <input type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    aria-label="Your Email"
+                    autocomplete="email"
                     required>
 
+                <input type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    aria-label="Subject"
+                    required>
 
-                <input type="text" name="subject" placeholder="Subject" aria-label="Subject" required>
-
-
-                <textarea name="message" rows="6" placeholder="Your Message" aria-label="Your Message"
+                <textarea name="message"
+                    rows="6"
+                    placeholder="Your Message"
+                    aria-label="Your Message"
                     required></textarea>
 
+                <button type="submit"
+                    class="btn">
 
-                <button type="submit" class="btn">
                     Send Message
+
                 </button>
 
             </form>
@@ -850,7 +938,6 @@
         </div>
 
     </section>
-
 
     <!-- ==========================
          FOOTER
@@ -864,56 +951,62 @@
                 HADI
             </h2>
 
-
             <p class="footer-text">
                 Building premium, luxury and modern websites
                 with beautiful UI and smooth user experience.
             </p>
 
-
             <div class="footer-social">
-
 
                 <!-- Facebook -->
 
-                <a href="https://www.facebook.com/share/18Lqkdq9Xo/" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.facebook.com/share/18Lqkdq9Xo/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Facebook">
 
-                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    <i class="fab fa-facebook-f"
+                        aria-hidden="true"></i>
 
                 </a>
-
 
                 <!-- Instagram -->
 
-                <a href="https://www.instagram.com/hammad_______khan_?stkn=eDJvZmo5b2Nvc24z" target="_blank"
-                    rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://www.instagram.com/hammad_______khan_?stkn=eDJvZmo5b2Nvc24z"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram">
 
-                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                    <i class="fab fa-instagram"
+                        aria-hidden="true"></i>
 
                 </a>
-
 
                 <!-- LinkedIn -->
 
                 <a href="https://www.linkedin.com/in/hammad-ahmad-358191407?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                    target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn">
 
-                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    <i class="fab fa-linkedin-in"
+                        aria-hidden="true"></i>
 
                 </a>
 
-
                 <!-- GitHub -->
 
-                <a href="#" aria-label="GitHub">
+                <a href="https://github.com/hadikhan122"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub">
 
-                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <i class="fab fa-github"
+                        aria-hidden="true"></i>
 
                 </a>
 
             </div>
-
 
             <div class="footer-links">
 
@@ -935,7 +1028,6 @@
 
             </div>
 
-
             <p class="footer-copy">
                 © 2026 Hadi. All Rights Reserved.
             </p>
@@ -944,15 +1036,16 @@
 
     </footer>
 
-
     <!-- BACK TO TOP BUTTON -->
 
-    <button id="backToTop" type="button" aria-label="Back to top">
+    <button id="backToTop"
+        type="button"
+        aria-label="Back to top">
 
-        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        <i class="fas fa-arrow-up"
+            aria-hidden="true"></i>
 
     </button>
-
 
     <!-- JavaScript -->
 
